@@ -3,6 +3,12 @@
 /* Lato */
 @import url(http://fonts.googleapis.com/css?family=Lato:400,400italic);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+* {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 html {
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -102,6 +108,9 @@ sub {
 
 img {
   border: 0;
+  margin: 0;
+  width: 100%;
+  height: auto;
 }
 
 svg:not(:root) {
@@ -137,6 +146,11 @@ table {
 
 td,
 th {
+  padding: 0;
+}
+
+ul, li {
+  margin: 0;
   padding: 0;
 }
 
@@ -420,4 +434,134 @@ optgroup {
   margin: 20px auto;
   color: white;
   font-size: 20px;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 80px;
+}
+.header .header-container {
+  height: 100%;
+  position: relative;
+  background-color: #313640;
+}
+.header .header-container .hmenu {
+  display: inline-block;
+}
+.header .header-container .user-menu {
+  height: 100%;
+  background-color: #27d69c;
+  min-width: 175px;
+  position: relative;
+}
+.header .header-container .user-menu img {
+  height: 50px;
+  width: 50px;
+  float: left;
+  left: 0;
+  top: 0;
+  margin: 15px;
+  border-radius: 50%;
+  background-color: #313640;
+}
+.header .header-container .user-menu div {
+  float: left;
+  display: block;
+  top: 0;
+  padding-top: 20px;
+  position: relative;
+  color: white;
+}
+.header .header-container .user-menu div span {
+  display: block;
+}
+.header .header-container .header-menu {
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.header .header-container .header-menu .header-openmenu {
+  display: none;
+}
+.header .header-container .header-menu .nav-menu {
+  line-height: 80px;
+}
+.header .header-container .header-menu .nav-menu li {
+  display: inline-block;
+  padding: 0 20px;
+}
+.header .header-container .header-menu .nav-menu li a {
+  color: #5e6577;
+}
+.header .header-container .header-menu .nav-menu li a i {
+  margin-right: 10px;
+}
+.header .header-container .header-menu .nav-menu li a i em {
+  display: inline-block;
+  position: absolute;
+  padding: 1px 3px;
+  margin-top: -5px;
+  margin-left: -5px;
+  background-color: #fb7262;
+  border-radius: 2px;
+  text-align: center;
+  top: 0;
+  font-size: 9px;
+  color: white;
+  font-style: normal;
+  box-shadow: rgba(0, 0, 0, 0.7) 1px 1px 2px;
+}
+.header .header-container .header-menu .nav-menu li:hover {
+  background-color: #5e6577;
+}
+.header .header-container .header-menu .nav-menu li:hover a {
+  color: #313640;
+}
+.header .header-container .logout {
+  height: 100%;
+  line-height: 80px;
+  width: 80px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.header .header-container .logout span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.header .header-container .logout span a {
+  color: #fb7262;
+}
+.header .header-container .logout span a i {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+  font-size: 40px;
+}
+.header .header-container .logout span a:hover {
+  color: #b74f41;
+}
+
+@media screen and (max-width: 750px) {
+  .header .header-container .header-menu {
+    width: calc(100% - 80px);
+  }
+  .header .header-container .header-menu .nav-menu {
+    position: relative;
+    width: 100%;
+    clear: both;
+    background-color: #313640;
+  }
+  .header .header-container .header-menu .nav-menu li {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #5e6577;
+    margin: 0;
+  }
 }

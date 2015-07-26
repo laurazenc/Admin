@@ -28,6 +28,8 @@ $aqua: 			#00c8cb
 $aquadark: 		#48a2a1
 $emeral: 		#27d69c
 $emeraldark:	#1a8b66
+$grayblue:		#5e6577
+$graybluedark:	#313640
 
 
 
@@ -40,5 +42,11 @@ $black:  		#111
 
 
 //
-// Add whatever variables you would like made available to the whole app
+// Mixins
 //
+@mixin calc($key, $value) 
+  #{$key}: -webkit-calc(#{$value})
+  #{$key}: -moz-calc(#{$value})
+  #{$key}: calc(#{$value})
+
+

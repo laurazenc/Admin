@@ -1,5 +1,9 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
+*{
+  @include transition(all 0.3s ease-in-out);
+}
+
 html {
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -99,6 +103,9 @@ sub {
 
 img {
   border: 0;
+  margin: 0;
+  width: 100%;
+  height: auto;
 }
 
 svg:not(:root) {
@@ -136,5 +143,10 @@ table {
 
 td,
 th {
+  padding: 0;
+}
+
+ul,li{
+  margin: 0;
   padding: 0;
 }
