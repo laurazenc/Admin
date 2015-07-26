@@ -17,6 +17,7 @@ $logout: 80px
 			height: 100%
 			background-color: $emeral
 			min-width: 175px 
+			width: auto
 			position: relative
 			img
 				+size(50px)
@@ -26,7 +27,7 @@ $logout: 80px
 				margin: 15px
 				border-radius: 50%
 				background-color: $graybluedark
-			div
+			.user-info
 				float: left
 				display: block
 				top: 0
@@ -35,7 +36,31 @@ $logout: 80px
 				color: $white
 				span 
 					display: block
-		
+
+			.logout 
+				height: 100%
+				width: 30px
+				line-height: 80px
+				margin: 0 10px 0 20px
+				display: block
+				float: left
+				position: relative
+				
+				span 
+					display: block
+					position: relative
+					+size(100%)
+					a
+						color: $coral
+						i
+							display: block
+							position: absolute
+							font-size: 30px
+							top: 50%
+							margin-top: -15px
+						&:hover
+							color: $coraldark
+			
 		.header-menu
 			height: 100%
 			position: absolute
@@ -73,39 +98,29 @@ $logout: 80px
 					&:hover 
 						background-color: $grayblue
 						a
-							color: $graybluedark
+							color: $emeral
 
-		.logout 
-			height: 100%
-			line-height: 80px
-			width: 80px
-			position: absolute
-			right: 0
-			top: 0
-
-			span 
-				display: block
-				+size(100%)
-				position: relative
-				a
-					color: $coral
-					i
-						display: block
-						position: absolute
-						left: 50%
-						top: 50%
-						margin-top: -20px
-						margin-left: -20px
-						font-size: 40px
-					&:hover
-						color: $coraldark
+		
 
 @media screen and (max-width:750px)
 	.header
 		.header-container
+
 			.header-menu
 				width: calc(100% - #{$logout})
+				.header-openmenu
+					display: block
+					line-height: 80px
+					height: 80px
+					font-size: 30px
+					color: $grayblue
+					i
+						padding: 25px
+						text-align: left
+						color: $grayblue
+						font-size: 30px
 				.nav-menu
+					display: none
 					position: relative
 					width: 100%
 					clear: both
@@ -115,6 +130,14 @@ $logout: 80px
 						width: 100%
 						border-bottom: 1px solid $grayblue
 						margin: 0 
+
+						a 
+							font-size: 16px
+					&:last-child
+						border-bottom: none
+				
+				.open 
+					display: block !important
 
 
 		

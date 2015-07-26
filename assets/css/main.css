@@ -14,6 +14,9 @@ html {
   -webkit-font-smoothing: antialiased;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -453,6 +456,7 @@ optgroup {
   height: 100%;
   background-color: #27d69c;
   min-width: 175px;
+  width: auto;
   position: relative;
 }
 .header .header-container .user-menu img {
@@ -465,7 +469,7 @@ optgroup {
   border-radius: 50%;
   background-color: #313640;
 }
-.header .header-container .user-menu div {
+.header .header-container .user-menu .user-info {
   float: left;
   display: block;
   top: 0;
@@ -473,8 +477,36 @@ optgroup {
   position: relative;
   color: white;
 }
-.header .header-container .user-menu div span {
+.header .header-container .user-menu .user-info span {
   display: block;
+}
+.header .header-container .user-menu .logout {
+  height: 100%;
+  width: 30px;
+  line-height: 80px;
+  margin: 0 10px 0 20px;
+  display: block;
+  float: left;
+  position: relative;
+}
+.header .header-container .user-menu .logout span {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.header .header-container .user-menu .logout span a {
+  color: #fb7262;
+}
+.header .header-container .user-menu .logout span a i {
+  display: block;
+  position: absolute;
+  font-size: 30px;
+  top: 50%;
+  margin-top: -15px;
+}
+.header .header-container .user-menu .logout span a:hover {
+  color: #b74f41;
 }
 .header .header-container .header-menu {
   height: 100%;
@@ -516,43 +548,28 @@ optgroup {
   background-color: #5e6577;
 }
 .header .header-container .header-menu .nav-menu li:hover a {
-  color: #313640;
-}
-.header .header-container .logout {
-  height: 100%;
-  line-height: 80px;
-  width: 80px;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.header .header-container .logout span {
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
-.header .header-container .logout span a {
-  color: #fb7262;
-}
-.header .header-container .logout span a i {
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-top: -20px;
-  margin-left: -20px;
-  font-size: 40px;
-}
-.header .header-container .logout span a:hover {
-  color: #b74f41;
+  color: #27d69c;
 }
 
 @media screen and (max-width: 750px) {
   .header .header-container .header-menu {
     width: calc(100% - 80px);
   }
+  .header .header-container .header-menu .header-openmenu {
+    display: block;
+    line-height: 80px;
+    height: 80px;
+    font-size: 30px;
+    color: #5e6577;
+  }
+  .header .header-container .header-menu .header-openmenu i {
+    padding: 25px;
+    text-align: left;
+    color: #5e6577;
+    font-size: 30px;
+  }
   .header .header-container .header-menu .nav-menu {
+    display: none;
     position: relative;
     width: 100%;
     clear: both;
@@ -563,5 +580,14 @@ optgroup {
     width: 100%;
     border-bottom: 1px solid #5e6577;
     margin: 0;
+  }
+  .header .header-container .header-menu .nav-menu li a {
+    font-size: 16px;
+  }
+  .header .header-container .header-menu .nav-menu:last-child {
+    border-bottom: none;
+  }
+  .header .header-container .header-menu .open {
+    display: block !important;
   }
 }
