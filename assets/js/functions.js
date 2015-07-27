@@ -1,5 +1,7 @@
 $( document ).ready(function() {
 
-  // Get started!
+  $('.header-openmenu').on('click', function(){
+  	$('.nav-menu').toggleClass('open');
+  });
 
 });
